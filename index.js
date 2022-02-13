@@ -7,10 +7,8 @@ button.addEventListener("click", () => {
     const res = await fetch("https://api.chucknorris.io/jokes/random");
     const joke = await res.json();
     showJoke.textContent = joke.value;
-    document.body.append(showJoke);
   };
   f();
 
-  document.body.append(div);
-  div.append(button);
+  div.append(showJoke);
 });
